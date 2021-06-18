@@ -1,0 +1,12 @@
+<h1>Instrumentos</h1>
+
+
+<div class="card-deck">
+  <!--$event es una palabra reservada de angular que indica que el 
+  instrumentoSeleccionado ejecuta un evento y emite un valor-->
+  <app-item-instrumento (instrumentoSeleccionado)="verInstrumento($event)"
+    *ngFor="let instrumentoLocal of instrumArray; let i = index" [instrumentoAux]="instrumentoLocal"
+    [index]="instrumentoLocal.id"></app-item-instrumento>
+
+
+</div>
